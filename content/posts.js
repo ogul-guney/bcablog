@@ -1,20 +1,34 @@
 /*
- * POSTS LIVE HERE.
- * Copy one object, give it a unique id, write a date, then write the post in body.
- * Dates use: YYYY-MM-DDTHH:MM:SS+03:00
- * category: 'dev' makes a post appear in Dev Log as well as Timeline.
+ * YAZI EKLEME REHBERİ
+ * 1. Bu listedeki örnek nesnelerden birini kopyalayın.
+ * 2. id benzersiz, tarih YYYY-AA-GG biçiminde olsun.
+ * 3. category alanına "dev" yazılırsa Dev Log'da görünür.
+ * 4. content içindeki her paragrafı çift satır sonu ile ayırın.
+ * 5. Yeni yazılar en üstte görünmesi için tarihleri doğru girin.
  */
 window.POSTS = [
   {
-    id: 'first-note',
-    date: '2026-09-24T21:30:00+03:00',
-    body: 'A small corner for passing thoughts, links, and things worth remembering.',
-    category: 'note'
+    id: 'deneme-postu',
+    date: '2026-09-22T15:03:00+03:00',
+    title: 'deneme postu',
+    excerpt: 'Kısa düşünceler için burada küçük bir alan var.',
+    category: 'note',
+    content: `Burası sitenin ilk notu. Yazıları GitHub üzerinde doğrudan bu dosyadan düzenleyebilirsin.
+
+Her yazı bağımsız bir kayıt olarak tutulur; sayfa yenilendiğinde otomatik olarak zaman sırasına girer.
+
+## Küçük bir başlangıç
+
+Metin, bağlantı ve basit kod parçaları kullanılabilir. Örneğin: \`git commit -m "yeni yazı"\`.`
   },
   {
-    id: 'building-in-public',
-    date: '2026-09-24T20:10:00+03:00',
-    body: 'The first version is deliberately simple: write the thought, commit it, and let the timeline grow.',
-    category: 'dev'
+    id: 'hello-world',
+    date: '2026-09-21T23:15:00+03:00',
+    title: 'Hello, World!',
+    excerpt: 'İlk satır, ilk commit, açık bir sayfa.',
+    category: 'dev',
+    content: `Bir şeyleri yayınlamak için büyük bir başlangıca gerek yok. Bu sayfa, küçük notların zamanla birikmesi için var.
+
+İlk kayıt burada dursun.`
   }
 ];

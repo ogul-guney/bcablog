@@ -1,24 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A small personal stream of thoughts." />
-    <title>Oğulr — notes</title>
+    <meta name="description" content="Kişisel notlar ve yazılar." />
+    <title>Oğulr — kişisel notlar</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='25' font-size='25'%3E✦%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <nav class="nav wrap" aria-label="Primary navigation">
-        <a class="brand" href="#timeline" aria-label="Home"><span data-site-name>Oğulr</span><span class="entry-count" data-entry-count></span></a>
+      <nav class="nav wrap" aria-label="Ana menü">
+        <a class="brand" href="#timeline" aria-label="Ana sayfa">
+          <span data-site-name>Oğulr</span><span class="entry-count" data-entry-count></span>
+        </a>
         <div class="nav-links">
           <a class="nav-link is-active" href="#timeline" data-view-link="timeline">Timeline</a>
           <a class="nav-link" href="#dev-log" data-view-link="dev-log">Dev Log</a>
           <a class="nav-link" href="#search" data-view-link="search">Search</a>
           <a class="nav-link" href="#archive" data-view-link="archive">Archive</a>
-          <button class="nav-link" type="button" data-random>Random</button>
-          <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme">
+          <button class="nav-link random-button" type="button" data-random>Random</button>
+          <button class="theme-toggle" type="button" aria-label="Koyu temayı aç" title="Temayı değiştir">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 15.8A8.4 8.4 0 0 1 8.2 3.4 8.4 8.4 0 1 0 20.6 15.8Z" /></svg>
           </button>
         </div>
@@ -27,47 +29,60 @@
 
     <main class="wrap">
       <section class="view is-visible" data-view="timeline" aria-labelledby="timeline-title">
-        <h1 id="timeline-title" class="sr-only">Timeline</h1>
-        <form class="composer" data-composer>
-          <label class="sr-only" for="new-post">Write a new post</label>
-          <textarea id="new-post" data-composer-input maxlength="500" placeholder="What's on your mind?"></textarea>
-          <div class="composer-bottom">
-            <span class="composer-status" data-composer-status>GitHub Pages · posts are published from the repository</span>
-            <button class="post-button" type="submit">Post</button>
-          </div>
-        </form>
-        <p class="composer-note" data-composer-note aria-live="polite"></p>
+        <h1 id="timeline-title" class="sr-only">Zaman akışı</h1>
         <div class="stream" data-post-list></div>
       </section>
 
       <section class="view" data-view="dev-log" aria-labelledby="dev-log-title">
-        <header class="page-heading"><p class="eyebrow">WORK IN PROGRESS</p><h1 id="dev-log-title">Dev Log</h1><p>Experiments, progress, and unfinished ideas.</p></header>
+        <header class="page-heading">
+          <p class="eyebrow">GÜNLÜK</p>
+          <h1 id="dev-log-title">Dev Log</h1>
+          <p>Yapım aşamasındaki fikirler, denemeler ve küçük ilerlemeler.</p>
+        </header>
         <div class="stream" data-dev-log-list></div>
       </section>
 
       <section class="view" data-view="search" aria-labelledby="search-title">
-        <header class="page-heading"><p class="eyebrow">SEARCH THE STREAM</p><h1 id="search-title">Search</h1>
-          <label class="search-box"><span class="sr-only">Search posts</span><input type="search" data-search-input placeholder="Start typing..." autocomplete="off" /><kbd>Esc</kbd></label>
+        <header class="page-heading">
+          <p class="eyebrow">ARŞİVDE ARA</p>
+          <h1 id="search-title">Search</h1>
+          <label class="search-box">
+            <span class="sr-only">Yazılarda ara</span>
+            <input type="search" data-search-input placeholder="Bir şey yazmaya başla..." autocomplete="off" />
+            <kbd>Esc</kbd>
+          </label>
         </header>
-        <p class="result-note" data-search-note>Start typing to search.</p>
+        <p class="result-note" data-search-note>Aramak için yazmaya başla.</p>
         <div class="stream" data-search-list></div>
       </section>
 
       <section class="view" data-view="archive" aria-labelledby="archive-title">
-        <header class="page-heading"><p class="eyebrow">EVERY POST</p><h1 id="archive-title">Archive</h1></header>
+        <header class="page-heading">
+          <p class="eyebrow">TÜM YAZILAR</p>
+          <h1 id="archive-title">Archive</h1>
+        </header>
         <div class="archive-list" data-archive-list></div>
       </section>
 
       <section class="view" data-view="post" aria-live="polite">
-        <a class="back-link" href="#timeline">← Back to timeline</a>
+        <a class="back-link" href="#timeline">← Zaman akışına dön</a>
         <article class="post-page" data-post-page></article>
       </section>
     </main>
 
-    <footer class="site-footer wrap"><span data-site-handle>ogulguney</span><span class="footer-dot">·</span><span>Published with GitHub Pages</span></footer>
+    <footer class="site-footer wrap">
+      <span data-site-handle>ogulguney</span><span class="footer-dot">·</span><span>GitHub Pages ile yayında</span>
+    </footer>
 
     <template id="post-card-template">
-      <article class="post-card"><a class="post-link" href="#" data-post-link><time class="post-meta" data-post-date></time><p class="post-text" data-post-body></p><span class="read-more">open →</span></a></article>
+      <article class="post-card">
+        <a class="post-link" href="#" data-post-link>
+          <time class="post-meta" data-post-date></time>
+          <h2 data-post-title></h2>
+          <p class="post-excerpt" data-post-excerpt></p>
+          <span class="read-more">oku →</span>
+        </a>
+      </article>
     </template>
 
     <script src="content/site.js"></script>

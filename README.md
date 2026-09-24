@@ -1,31 +1,23 @@
-# Personal stream for GitHub Pages
+# GitHub Pages kişisel blog
 
-This site is a static personal timeline, not a conventional article blog. Every post is text-only.
+Bu proje derleme, sunucu, veritabanı veya üçüncü taraf kaynak gerektirmez. GitHub Pages ayarından `Deploy from a branch` seçerek ana dalın kök klasörünü yayınlamak yeterlidir.
 
-## Publish a post
+## İçerik düzenleme
 
-1. Open `content/posts.js` on GitHub.
-2. Click the pencil icon.
-3. Copy an existing object and edit `id`, `date`, and `body`.
-4. Click **Commit changes**.
-5. GitHub Pages updates the public site automatically within a few minutes.
+- Site adı ve alt bilgi: `content/site.js`
+- Yazılar: `content/posts.js`
+- Görünüm: `assets/styles.css`
+- Davranışlar: `assets/app.js`
 
-The composer on the website copies a draft and opens this file; static GitHub Pages cannot commit visitor input directly to a repository.
+Yeni yazı eklemek için `content/posts.js` içindeki bir yazı nesnesini kopyalayın. `id` eşsiz olmalı; `date` alanı ISO biçiminde (`2026-09-24T19:30:00+03:00`) yazılmalıdır. `category: 'dev'` olanlar Dev Log sayfasında görünür.
 
-## File map
+## GitHub Pages yayını
 
-- `content/posts.js`: post text and dates
-- `content/site.js`: site name, handle, and GitHub edit URL
-- `assets/styles.css`: visual design
-- `assets/app.js`: timeline, search, archive, theme, and composer behaviour
+1. Dosyaları yeni bir GitHub deposunun ana dizinine yükleyin.
+2. Depoda **Settings → Pages** ekranını açın.
+3. **Deploy from a branch** seçin; dal olarak `main`, klasör olarak `/(root)` ayarlayın.
+4. **Save** ile yayınlayın. GitHub birkaç dakika içinde site adresini Pages ekranında gösterir.
 
-Keep the following folder structure when uploading to GitHub:
+## Başka bir yapay zekâ ile düzenleme
 
-```text
-index.html
-.nojekyll
-assets/styles.css
-assets/app.js
-content/site.js
-content/posts.js
-```
+Kodu verirken şu dosyaların rollerini belirtin: `content/posts.js` yalnızca içerik; `content/site.js` genel metinler; `assets/styles.css` tasarım; `assets/app.js` işlevler. Bu ayrım, tasarım ve içerik değişikliklerinin birbirine karışmasını engeller.
