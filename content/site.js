@@ -1,9 +1,8 @@
-/*
- * Site genel ayarları. GitHub üzerinden sadece bu alanları değiştirmek yeterli.
- * HTML veya JavaScript bilgisi olmayan biri dahi aşağıdaki metinleri güncelleyebilir.
- */
+/* Change these short pieces of site information whenever needed. */
 window.SITE = {
   name: 'Oğulr',
   handle: 'ogulguney',
-  language: 'tr',
+  language: 'en',
+  // Change this if the repository name or owner changes.
+  postsEditorUrl: 'https://github.com/ogul-guney/bcablog/edit/main/content/posts.js'
 };
