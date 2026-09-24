@@ -4,5 +4,5 @@ window.SITE = {
   handle: 'ogulguney',
   language: 'en',
   // Replace this after deploying the Cloudflare Worker. Keep the final /posts part.
-  postApiUrl: 'https://REPLACE-WITH-YOUR-WORKER.workers.dev/posts'
+  postApiUrl: 'https://bcablog-posts.ogulgnyy.workers.dev/posts'
 };
