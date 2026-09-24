@@ -1,0 +1,14 @@
+[
+  {
+    "id": "first-note",
+    "date": "2026-09-24T21:30:00+03:00",
+    "body": "A small corner for passing thoughts, links, and things worth remembering.",
+    "category": "note"
+  },
+  {
+    "id": "building-in-public",
+    "date": "2026-09-24T20:10:00+03:00",
+    "body": "The first version is deliberately simple: write the thought, commit it, and let the timeline grow.",
+    "category": "dev"
+  }
+]

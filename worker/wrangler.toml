@@ -1,0 +1,12 @@
+name = "bcablog-posts"
+main = "src/index.js"
+compatibility_date = "2026-09-24"
+
+[vars]
+GITHUB_OWNER = "ogul-guney"
+GITHUB_REPO = "bcablog"
+GITHUB_BRANCH = "main"
+ALLOWED_ORIGIN = "https://ogul-guney.github.io"
+
+[secrets]
+required = [ "GITHUB_TOKEN" ]

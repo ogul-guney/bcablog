@@ -1,9 +1,8 @@
-/*
- * Site genel ayarları. GitHub üzerinden sadece bu alanları değiştirmek yeterli.
- * HTML veya JavaScript bilgisi olmayan biri dahi aşağıdaki metinleri güncelleyebilir.
- */
+/* Change these short pieces of site information whenever needed. */
 window.SITE = {
   name: 'Oğulr',
   handle: 'ogulguney',
-  language: 'tr',
+  language: 'en',
+  // Replace this after deploying the Cloudflare Worker. Keep the final /posts part.
+  postApiUrl: 'https://REPLACE-WITH-YOUR-WORKER.workers.dev/posts'
 };
